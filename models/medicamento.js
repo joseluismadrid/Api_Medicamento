@@ -29,7 +29,8 @@ const MedicamentoSchema =({
         required:[
             true, 'El Gramaje es requerido'
         ]
-    }
+    },
+   
 
 
 

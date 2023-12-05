@@ -8,7 +8,7 @@ const getMedicamento=async(req,res)=>{
     })
 }
 const postMedicamento =async(req,res)=>{
-    const info = req.query
+    const info = req.body
     let mensaje = 'Insercion exitosa'
     try {
         const medicamento = new medicamentos(info) //Instanciar el objeto
@@ -23,7 +23,7 @@ const postMedicamento =async(req,res)=>{
     })
 }
 const putMedicamento =async(req,res)=>{
-    const {idMedicamento,nombre,stock,medicion,gramaje}=req.query
+    const {idMedicamento,nombre,stock,medicion,gramaje}=req.body
     let mensaje ='actualizacion Exitosa'
     try{
         const medicamento = await medicamentos.findOneAndUpdate({idMedicamento:idMedicamento},{nombre:nombre,stock:stock,medicion:medicion,gramaje:gramaje});
@@ -37,7 +37,7 @@ const putMedicamento =async(req,res)=>{
     })
 }
 const deleteMedicamento = async(req,res)=>{
-    const {idMedicamento}=req.query
+    const {idMedicamento}=req.body
     let mensaje= ''
     try{
         const medicamento = await medicamentos.findOneAndDelete({idMedicamento})
