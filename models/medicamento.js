@@ -14,8 +14,7 @@ const MedicamentoSchema =({
     stock:{
         type:Number,
         required:[true, 'El Stock es requeridod'],
-        min:[1, 'El Stock debe contener mínimo 1 caracteres'],
-        max:[3, 'El Stock debe contener máximo 10 caracteres']
+       
     },
     medicion:{
         type:String,
