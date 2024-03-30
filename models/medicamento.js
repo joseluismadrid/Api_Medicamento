@@ -2,26 +2,31 @@ const {Schema, model} = require('mongoose')
 
 const MedicamentoSchema =({
     idMedicamento:{
-        type:String,
+        type:Number,
         unique:true,
         required:[true, 'El id es requerido']
 
     },
     nombre:{
-        type:String,
-        unique:true,
+        type:String,       
         required:[true, 'El nombre es requerido ']
     },
     stock:{
-        type:String,
+        type:numer,
         required:[true, 'El Stock es requeridod'],
         min:[1, 'El Stock debe contener mínimo 1 caracteres'],
-        max:[10, 'El Stock debe contener máximo 10 caracteres']
+        max:[3, 'El Stock debe contener máximo 10 caracteres']
     },
     medicion:{
         type:String,
         required:[
             true,'La medicion es requerida'
+        ]
+    },
+    Numerogramaje:{
+        type:Number,
+        required:[
+            true, 'El Numero de Gramaje es requerido'
         ]
     },
     gramaje:{
