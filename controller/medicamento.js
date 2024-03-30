@@ -37,10 +37,10 @@ const putMedicamento =async(req,res)=>{
     })
 }
 const deleteMedicamento = async(req,res)=>{
-    const {idMedicamento}=req.body
+    const {nombre}=req.body
     let mensaje= ''
     try{
-        const medicamento = await medicamentos.findOneAndDelete({idMedicamento})
+        const medicamento = await medicamentos.findOneAndDelete({nombre})
         mensaje ='Eliminacion exitosa'
     }catch(error){
         mensaje= error
