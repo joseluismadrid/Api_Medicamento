@@ -1,13 +1,7 @@
 const {Schema, model} = require('mongoose')
 
 const MedicamentoSchema =({
-    idMedicamento:{
-        type:Number,
-        unique:true,
-        required:[true, 'El id es requerido']
-
-    },
-    nombre:{
+       nombre:{
         type:String,       
         required:[true, 'El nombre es requerido ']
     },
