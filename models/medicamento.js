@@ -1,9 +1,9 @@
 const {Schema, model} = require('mongoose')
 
 const MedicamentoSchema =({
-       nombre:{
+    nombre:{
         type:String,       
-        required:[true, 'El nombre es requerido ']
+        required:[true, 'El nombre es requerido '],
     },
     stock:{
         type:Number,
