@@ -23,10 +23,10 @@ const postMedicamento =async(req,res)=>{
     })
 }
 const putMedicamento =async(req,res)=>{
-    const {nombre,stock,medicion,Numerogramaje,gramaje}=req.body
+    const {nombre,stock,medicion,Numerogramaje,gramaje,text3}=req.body
     let mensaje ='actualizacion Exitosa'
     try{
-        const medicamento = await medicamentos.findOneAndUpdate({nombre:nombre},{stock:stock,medicion:medicion,Numerogramaje:Numerogramaje,gramaje:gramaje});
+        const medicamento = await medicamentos.findOneAndUpdate({nombre:nombre},{stock:stock,medicion:medicion,Numerogramaje:Numerogramaje,gramaje:gramaje,text3:text3});
         
     }catch(error){
         mensaje= error

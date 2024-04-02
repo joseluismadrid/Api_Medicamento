@@ -28,6 +28,10 @@ const MedicamentoSchema =({
             true, 'El Gramaje es requerido'
         ]
     },
+    text3:{
+        type:String,
+        required:[true,'Ingresa el text3 por requerimiento']
+    }
    
 
 
